@@ -20,9 +20,9 @@ namespace Places.Controllers
     }
 
     [HttpPost("/places")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string cityName, string journal, string photo)
     {
-      Place myPlace = new Place(description);
+      Place myPlace = new Place(cityName, journal, photo);
       return RedirectToAction("Index");
     }
 
@@ -39,7 +39,5 @@ namespace Places.Controllers
       Place foundPlace = Place.Find(id);
       return View(foundPlace);
     }
-  
   }
-  
 }

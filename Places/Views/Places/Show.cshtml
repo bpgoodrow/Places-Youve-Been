@@ -8,7 +8,9 @@
   <body>
     <h1>List of Places Details: </h1>
 
-    <h2>@Model.Description</h2>
+    <h2>@Model.CityName</h2>
+    <p>@Model.Journal</p>
+    <div><img src="@Model.Photo" alt="Picture of @Model.CityName"></div>
 
     <a href='/places/new'>Add another place</a>
     <a href='/places'>View all places</a>
